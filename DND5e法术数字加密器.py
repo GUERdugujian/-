@@ -72,17 +72,18 @@ spell_libraries = [
 ]
 def convert_spells(input_str, separator):
     # 示例命令: python script.py arg1 arg2
-  if len(sys.argv) > 1:
+ if len(sys.argv) > 1:
     input_str = sys.argv[1]  # 第一个参数
     separator = sys.argv[2]  # 第二个参数
-  else:
+ else:
     separator="、"
-if not input_str.isdigit():
-        return "错误：请输入有效的数字串！"
-    
+ if not input_str.isdigit():
+        return 0   
+if convert_spells==0
+  print("错误：请输入有效的数字串！")
 result = ""
-for digit in input_str:
+for digit in convert_spells.input_str:
         level = int(digit)
         result+=random.choice(spell_libraries[level])
-        result+=separator
-return result
+        result+=convert_spells.separator
+print(result)
