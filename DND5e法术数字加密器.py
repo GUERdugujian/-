@@ -89,4 +89,4 @@ else:
         else:
             result.append("未知法术")
     
-    return f"输出：{result}".join(result.split(separator))
+    return {"输出：{result}".join(result.split(separator))}
