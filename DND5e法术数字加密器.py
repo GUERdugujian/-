@@ -1,12 +1,6 @@
 import random
 import sys
 
-# 示例命令: python script.py arg1 arg2
-if len(sys.argv) > 1:
-    input_str = sys.argv[1]  # 第一个参数
-    separator = sys.argv[2]  # 第二个参数
-else:
-    separator="、"
 spell_libraries = [
     # 0环
     ["光亮术", "魔法伎俩", "修复术", "冷冻射线", "传讯术", "酸液飞溅", "剑刃防护", "颤栗之触", 
@@ -78,6 +72,12 @@ spell_libraries = [
 ]
 
 def convert_spells(input_str, separator):
+    # 示例命令: python script.py arg1 arg2
+if len(sys.argv) > 1:
+    input_str = sys.argv[1]  # 第一个参数
+    separator = sys.argv[2]  # 第二个参数
+else:
+    separator="、"
     if not input_str.isdigit():
         return "错误：请输入有效的数字串！"
     
