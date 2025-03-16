@@ -1,6 +1,6 @@
+@app.route("/api", methods=["POST"])
 import random
 import sys
-
 spell_libraries = [
     # 0环
     ["光亮术", "魔法伎俩", "修复术", "冷冻射线", "传讯术", "酸液飞溅", "剑刃防护", "颤栗之触", 
