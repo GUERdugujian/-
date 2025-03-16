@@ -78,15 +78,12 @@ if len(sys.argv) > 1:
     separator = sys.argv[2]  # 第二个参数
 else:
     separator="、"
-    if not input_str.isdigit():
+if not input_str.isdigit():
         return "错误：请输入有效的数字串！"
     
-    result = []
-    for digit in input_str:
+result = ""
+for digit in input_str:
         level = int(digit)
-        if 0 <= level < len(spell_libraries):
-            result.append(random.choice(spell_libraries[level]))
-        else:
-            result.append("未知法术")
-    
-    return {"report"："{result}".join(result.split(separator))"}
+        result+=random.choice(spell_libraries[level])
+        result+=separator
+return result
