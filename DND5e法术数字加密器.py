@@ -71,19 +71,14 @@ spell_libraries = [
      "祈愿术"]
 ]
 def convert_spells(input_str, separator):
-    # 示例命令: python script.py arg1 arg2
- if len(sys.argv) > 1:
-    input_str = sys.argv[1]  # 第一个参数
-    separator = sys.argv[2]  # 第二个参数
- else:
-    separator="、"
+    input_str = request.form.get(input)
+    separator = request.form.get(separator)
  if not input_str.isdigit():
-        return 0   
-if convert_spells==0
-  print("错误：请输入有效的数字串！")
-result = ""
-for digit in convert_spells.input_str:
+    print("错误：请输入有效的数字串！")  
+ else:
+     result = ""
+     for digit in input_str:
         level = int(digit)
         result+=random.choice(spell_libraries[level])
-        result+=convert_spells.separator
-print(result)
+        result+=separator
+    print(result)
