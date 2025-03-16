@@ -70,13 +70,12 @@ spell_libraries = [
      "虹光法墙", "形体变化", "复仇风暴", "时间停止", "完全变形术", "完全复生术", "怪影杀手",
      "祈愿术"]
 ]
-
 def convert_spells(input_str, separator):
     # 示例命令: python script.py arg1 arg2
-if len(sys.argv) > 1:
+  if len(sys.argv) > 1:
     input_str = sys.argv[1]  # 第一个参数
     separator = sys.argv[2]  # 第二个参数
-else:
+  else:
     separator="、"
 if not input_str.isdigit():
         return "错误：请输入有效的数字串！"
